@@ -6,7 +6,12 @@ import {Contato} from './pages/contato'
 import {Produto} from './pages/produto'
 import {NotFound} from './pages/notfound'
 
+import {Layout} from './components/layout'
+
 const router = createBrowserRouter([
+ {
+    element: <Layout />,
+    children: [
     {
         path: '/',
         element: < Home/>,
@@ -27,6 +32,8 @@ const router = createBrowserRouter([
         path: '*',
         element:<NotFound />
     }
+    ]
+ }
 ])
 
 export {router}
